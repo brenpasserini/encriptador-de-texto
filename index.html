@@ -2,55 +2,60 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <!--<meta http-equiv="x-ua-compatible" content="ie=edge">-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Encriptador de Texto</title>
-        <link rel="icon" type="image/x-icon" href="../Encriptador/img-encriptador/aluralatamlogo.png">
-        <link rel="stylesheet" type="text/css" href="reset.css">
-        <link rel="stylesheet" type="text/css" href="encriptador-decoder_style.css">
+        <link rel="icon" type="image/x-icon" href="./enc-img/aluralatamlogo.png">
+        <link rel="stylesheet" type="text/css" href="./enc.css/reset.css">
+        <link rel="stylesheet" type="text/css" href="./enc.css/enc-style.css">
+        <link rel="stylesheet" type="text/css" href="./enc.css/enc-footer.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
     </head>
     <body>
-        <header>
-            <h1 id="logo"><img src="../Encriptador/img-encriptador/Logo_alura.png" alt="Logo Alura"></h1>
+        <header class="header">
+                <h1 id="logo"><img src="./enc-img/Logo_alura.png" alt="Logo de Alura">
         </header>
         <main>
-            <div class="containers">
-            <section class="container_input">
-                <form class="forms">
-                    <textarea type="text" name="message" id="cajatexto" class="textArea1" cols="40" rows="6" placeholder="Ingrese el texto aquí..."></textarea>
-                </form>
-                <div class="aclaration">
-                    <img class="vector" src="../Encriptador/img-encriptador/Vector.png" alt="Aclaracion">
-                    <h6>Solo letras minúsculas y sin acentos.</h6>
+            <div class="container"> 
+            <section class="container__section--primary"> 
+                <form class="container__form">
+                    <textarea class="container__textarea--primary" type="text" name="message" id="cajatexto" cols="40" rows="6" placeholder="Ingrese el texto aquí..."></textarea>
+                </form> 
+                <div class="container__alert">
+                    <img class="container__alert__img" src="./enc-img/Vector.png" alt="Aclaracion">
+                    <h6 class="container__alert__text">Solo letras minúsculas y sin acentos.</h6>
                 </div>
-                <div class="buttons">
-                    <button class="btn1" type="button" onclick="btnencriptar()">Encriptar</button>
-                    <button class="btn2" type="button" onclick="btndesencriptar()">Desencriptar</button>
+                <div class="button">
+                    <button class="button__btn--primary" type="button" onclick="btnencriptar()">Encriptar</button> 
+                    <button class="button__btn--secondary" type="button" onclick="btndesencriptar()">Desencriptar</button> 
                 </div>
             </section>
             </div>
-            <section class="container_ouput">
-                <div class="container_ouput-ouput"> 
-                    <div id="dissapear">
-                        <img id="image_ouput" src="../Encriptador/img-encriptador/Muñeco.png">
-                        <h3>Ningún mensaje fue encontrado</h3>
-                        <h5>Ingrese el texto que desee encriptar o desencriptar</h5>
+
+            <section class="container__section--secondary"> 
+                <div class="container__message"> 
+                    <div id="dissapear"> 
+                        <img id="image_ouput" src="./enc-img/Muñeco.png"> 
+                        <h3 class="box__message__nomessage">Ningún mensaje fue encontrado</h3>
+                        <h5 class="box__message__input">Ingrese el texto que desee encriptar o desencriptar</h5>
                     </div>
-                    <form>
-                        <textarea type="text" name="message" class="textArea2" cols="18" rows="8"></textarea>
-                    </form>
+                    <div class="appear">
+                        <form>
+                            <textarea type="text" name="message" class="container__textarea--secondary" cols="18" rows="8"></textarea> 
+                        </form>
+                        <button id="btn_copybtn" type="button" onclick="btnCopyText()">Copiar</button> 
+                    </div>
                 </div>
-                    <button id="btn_copybtn" type="button" onclick="btnCopyText()">Copiar</button>
             </section>
         </main>
-        <footer class="footer-ftr">
-            <div class="footer_copy">
-                <p class="copyright"> &copy; Página realizada por <span>Brenda N. Passerini</span> - 2022</p>
-                <a class="footer-socialMedia-item-link" href="" target="_blank" title="GitHub de BNP"><i class="fa-brands fa-github"></i></a>
+        <footer class="footer">
+            <div class="footer__copy">
+                <p class="footer__copyright"> &copy; Página realizada por <span>Brenda N. Passerini</span> - 2022</p>
+                <!--<a class="footer__socialMedia-item-link" href="" target="_blank" title="GitHub de BNP"><i class="fa-brands fa-github"></i></a>-->
             </div>
         </footer>
     </body>
-    <script src="encriptador-decoder.js"></script>
+    <script src="enc-js/encript.js"></script>
 </html>
